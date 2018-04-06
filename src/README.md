@@ -2,7 +2,7 @@
 
 ## Insert
 
-My insert method is a recursive procedure that adds the given word, conviniently called word, one letter at a time. It works by taking the first character of the word and storing this as a value. It then inserts the word letter by letter into the tree, recursively, by taking a substring(1) of the word. This essentially makes the next word the head of the word, and the next word to be inserted, It also checks if the letter is already inserted, in which case, it doesn't add it, and contniues traversijg through the tree, until the word is completely inserted. When the last letter of the word is added, it is 'tagged' with a boolean value isEnd. This value is set to true, and it denotes that this specific character is the end of a word, and will be used later in my allWords() method.
+My insert method is a recursive procedure that adds the given word, conviniently called word, one letter at a time. It works by taking the first character of the word and storing this as a value. It then inserts the word letter by letter into the tree, recursively, by taking a substring(1) of the word. This essentially makes the next letter the head of the word, and the next letter to be inserted, It also checks if the letter is already inserted, in which case, it doesn't add it, and continues traversing through the tree, until the word is completely inserted. When the last letter of the word is added, it is 'tagged' with a boolean value isEnd. This value is set to true, and it denotes that this specific character is the end of a word, and will be used later in my allWords() method.
 
 	private Boolean isEnd = false;
 
