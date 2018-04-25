@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * @author Qasim Nawaz
  */
 public class DictionaryTree {
-        	
+	
 	private Map<Character, DictionaryTree> children = new LinkedHashMap<>();
 	private Map<Integer, String> pop = new HashMap<>();
 	private Map<String, Integer> popTracker = new HashMap<>();
@@ -25,7 +25,7 @@ public class DictionaryTree {
      *
      * @param word the word to insert
      */
-    void insert(String word) {
+	void insert(String word) {
         Character charAt0;
         int length = word.length();
         if(length >= 1) {
@@ -48,7 +48,7 @@ public class DictionaryTree {
      * @param word       the word to insert
      * @param popularity the popularity of the inserted word
      */
-    void insert(String word, int popularity) {
+	void insert(String word, int popularity) {
         insert(word);  
         if ((pop.containsValue(word))) {
         	pop.remove(popTracker.get(word));
@@ -68,7 +68,7 @@ public class DictionaryTree {
      * @param word the word to delete from this dictionary
      * @return whether or not the parent can delete this node from its children
      */
-    boolean remove(String word) {
+	boolean remove(String word) {
     	Boolean lose = false;
     	Character charToRemove;
     	int length = word.length();
@@ -100,7 +100,7 @@ public class DictionaryTree {
      * @param word the word whose presence will be checked
      * @return true if the specified word is stored in this tree; false otherwise
      */
-    boolean contains(String word) {
+	boolean contains(String word) {
     	Character charAt0;
     	
     	if(word.length() >= 1) {
@@ -131,8 +131,7 @@ public class DictionaryTree {
      * @return a word that starts with the given prefix, or an empty optional
      * if no such word is found.
      */
-    
-    Optional<String> predict(String prefix) {
+	Optional<String> predict(String prefix) {
     	
     	Optional<String> prediction = Optional.empty();
     	Optional<DictionaryTree> currentTree = Optional.of(this);
@@ -169,7 +168,7 @@ public class DictionaryTree {
      * @param prefix the prefix of the words found
      * @return the (at most) n most popular words with the specified prefix
      */
-    List<String> predict(String prefix, int n) {
+	List<String> predict(String prefix, int n) {
         throw new RuntimeException("DictionaryTree.predict not implemented yet");
     }
 
@@ -177,7 +176,7 @@ public class DictionaryTree {
      * @return the number of leaves in this tree, i.e. the number of words which are
      * not prefixes of any other word.
      */
-    int numLeaves() {
+	int numLeaves() {
     	int count = 0;
     	
     	for (Map.Entry<Character, DictionaryTree> child  : children.entrySet()) {
@@ -196,7 +195,7 @@ public class DictionaryTree {
      * @return the maximum number of children held by any node in this tree
      */
     
-    int maximumBranching() {
+	int maximumBranching() {
     	int maxBranch = children.size();
     	
     	for (Map.Entry<Character, DictionaryTree> child  : children.entrySet()) {
@@ -209,7 +208,7 @@ public class DictionaryTree {
     /**
      * @return the height of this tree, i.e. the length of the longest branch
      */
-    int height() { 
+	int height() { 
         int height = -1;
 
         for (Map.Entry<Character, DictionaryTree> child  : children.entrySet()) {
@@ -221,11 +220,11 @@ public class DictionaryTree {
     /**
      * @return the number of nodes in this tree
      */
-    int size() {
+	int size() {
     	return sizeRecurs();
     }
     
-    int sizeRecurs() {
+	int sizeRecurs() {
     	int size = 1;
 
         for (Map.Entry<Character, DictionaryTree> child : children.entrySet()) {
@@ -237,7 +236,7 @@ public class DictionaryTree {
     /**
      * @return the longest word in this tree
      */
-    String longestWord() {
+	String longestWord() {
     	String longestWord = "";
     	List<String> allWord = new ArrayList<String>();
     	allWord = allWords();
@@ -252,7 +251,7 @@ public class DictionaryTree {
     /**
      * @return all words stored in this tree as a list
      */
-    List<String> allWords() {
+	List<String> allWords() {
     	List<String> wordList = new ArrayList<String>();
     	String word = "";
     	
@@ -279,7 +278,7 @@ public class DictionaryTree {
      * @param <A> the type of the folded value
      * @return the result of folding the tree using f
      */
-    <A> A fold(BiFunction<DictionaryTree, Collection<A>, A> f) {
+	<A> A fold(BiFunction<DictionaryTree, Collection<A>, A> f) {
         throw new RuntimeException("DictionaryTree.fold not implemented yet");
     }
 }
