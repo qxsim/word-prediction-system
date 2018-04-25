@@ -13,8 +13,8 @@ import java.util.stream.Stream;
  * @author Qasim Nawaz
  */
 public class DictionaryTree {
-
-    private Map<Character, DictionaryTree> children = new LinkedHashMap<>();
+        	
+	private Map<Character, DictionaryTree> children = new LinkedHashMap<>();
 	private Map<Integer, String> pop = new HashMap<>();
 	private Map<String, Integer> popTracker = new HashMap<>();
 	private Boolean isEnd = false;
