@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author Qasim Nawaz
- */
+* @author Qasim Nawaz
+*/
 public class CLI {
 
     /**
