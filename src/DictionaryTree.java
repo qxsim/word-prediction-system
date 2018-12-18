@@ -44,7 +44,7 @@ public class DictionaryTree {
     }
 
 	/**
-    * Inserts the given word into this dictionary with the given popularity.
+	* Inserts the given word into this dictionary with the given popularity.
     * If the word already exists, the popularity will be overridden by the given value.
     *
     * @param word       the word to insert
@@ -61,7 +61,7 @@ public class DictionaryTree {
         popTracker.put(word, popularity); 
     }
     
-    /**
+	/**
     * Removes the specified word from this dictionary.
     * Returns true if the caller can delete this node without losing
     * part of the dictionary, i.e. if this node has no children after
@@ -96,7 +96,7 @@ public class DictionaryTree {
 		return lose;
     }
     
-    /**
+	/**
     * Determines whether or not the specified word is in this dictionary.
     *
     * @param word the word whose presence will be checked

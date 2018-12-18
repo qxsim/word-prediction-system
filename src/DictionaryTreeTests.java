@@ -2,8 +2,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
- * @author Qasim Nawaz
- */
+* @author Qasim Nawaz
+*/
 public class DictionaryTreeTests {
 
     @Test
