@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 */
 public class DictionaryTree {
 
-	private Map<Character, DictionaryTree> children = new LinkedHashMap<>();
+    private Map<Character, DictionaryTree> children = new LinkedHashMap<>();
 	private Map<Integer, String> pop = new HashMap<>();
 	private Map<String, Integer> popTracker = new HashMap<>();
 	private Boolean isEnd = false;
@@ -186,7 +186,6 @@ public class DictionaryTree {
     /**
     * @return the maximum number of children held by any node in this tree
     */
-    
 	int maximumBranching() {
     	int maxBranch = children.size();
     	
