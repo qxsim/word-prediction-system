@@ -86,7 +86,7 @@ public class DictionaryTreeTests {
     
     @Test
     public void sizeShouldReduceBy1AfterThisRemoval() {
-    	 DictionaryTree unit = new DictionaryTree();
+         DictionaryTree unit = new DictionaryTree();
          unit.insert("test");
          unit.insert("testt");
          int sizeBefore = unit.size();
